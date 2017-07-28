@@ -33,6 +33,7 @@ public class ProductInfoValidator implements Validator {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "price", "NotEmpty.productForm.price");
  
         String code = productInfo.getCode();
+        
         if (code != null && code.length() > 0) {
             if (code.matches("\\s+")) {
                 errors.rejectValue("code", "Pattern.productForm.code");

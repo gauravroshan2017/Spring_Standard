@@ -5,6 +5,7 @@ public class CartLineInfo {
     private ProductInfo productInfo;
     private int quantity;
  
+    
     public CartLineInfo() {
         this.quantity = 0;
     }

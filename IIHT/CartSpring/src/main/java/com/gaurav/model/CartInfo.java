@@ -5,6 +5,7 @@ import java.util.List;
  
 public class CartInfo {
  
+	
     private int orderNum;
  
     private CustomerInfo customerInfo;

@@ -4,6 +4,7 @@ import com.gaurav.entity.Product;
 import com.gaurav.model.PaginationResult;
 import com.gaurav.model.ProductInfo;
 
+
 public interface ProductDAO {
 	public Product findProduct(String code);
 	public ProductInfo findProductInfo(String code) ;

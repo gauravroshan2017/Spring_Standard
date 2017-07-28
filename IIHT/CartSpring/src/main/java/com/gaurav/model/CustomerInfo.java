@@ -7,6 +7,7 @@ public class CustomerInfo {
     private String email;
     private String phone;
     
+    
     private boolean valid;
  
  

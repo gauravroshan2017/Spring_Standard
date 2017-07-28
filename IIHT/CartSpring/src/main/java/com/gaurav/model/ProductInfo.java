@@ -15,6 +15,7 @@ public class ProductInfo {
  
     public ProductInfo() {
     }
+    
  
     public ProductInfo(Product product) {
         this.code = product.getCode();

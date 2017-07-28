@@ -67,6 +67,7 @@ public class Product implements Serializable {
     }
  
     @Lob
+    
     @Column(name = "Image", length = Integer.MAX_VALUE, nullable = true)
     public byte[] getImage() {
         return image;

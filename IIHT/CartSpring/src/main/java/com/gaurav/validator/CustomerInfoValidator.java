@@ -15,6 +15,7 @@ public class CustomerInfoValidator implements Validator {
 	private EmailValidator emailValidator = EmailValidator.getInstance();
  
     // This Validator support CustomerInfo class.
+    
     @Override
     public boolean supports(Class<?> clazz) {
         return clazz == CustomerInfo.class;

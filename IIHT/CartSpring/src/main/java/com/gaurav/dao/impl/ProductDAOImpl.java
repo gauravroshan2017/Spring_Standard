@@ -88,6 +88,7 @@ public class ProductDAOImpl implements ProductDAO {
         Query query = session.createQuery(sql);
         if (likeName != null && likeName.length() > 0) {
             query.setParameter("likeName", "%" + likeName.toLowerCase() + "%");
+            
         }
         return new PaginationResult<ProductInfo>(query, page, maxResult, maxNavigationPage);
     }

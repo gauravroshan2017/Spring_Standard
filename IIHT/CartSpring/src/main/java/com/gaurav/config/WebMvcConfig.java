@@ -38,6 +38,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/js/**").addResourceLocations("/js/").setCachePeriod(31556926);
     }
  
+    
     // equivalent for <mvc:default-servlet-handler/> tag
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {

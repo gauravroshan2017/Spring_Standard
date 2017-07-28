@@ -66,6 +66,7 @@ public class OrderDetailInfo {
         this.price = price;
     }
  
+    
     public double getAmount() {
         return amount;
     }

@@ -53,6 +53,7 @@ public class OrderInfo {
         this.orderDate = orderDate;
     }
  
+    
     public int getOrderNum() {
         return orderNum;
     }

@@ -125,6 +125,7 @@ public class ApplicationContextConfig {
     @Bean(name = "orderDAO")
     public OrderDAO getOrderDAO() {
         return new OrderDAOImpl();
+        
     }
      
     @Bean(name = "accountDAO")
