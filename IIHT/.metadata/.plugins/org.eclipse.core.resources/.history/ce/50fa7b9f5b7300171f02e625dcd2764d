@@ -1,0 +1,5 @@
+package com.gaurav.authntication;
+
+public class SpringSecurityInitializer {
+
+}

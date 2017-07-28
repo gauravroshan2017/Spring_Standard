@@ -1,0 +1,5 @@
+package com.gaurav.dao.impl;
+
+public class ProductDAOImpl {
+
+}

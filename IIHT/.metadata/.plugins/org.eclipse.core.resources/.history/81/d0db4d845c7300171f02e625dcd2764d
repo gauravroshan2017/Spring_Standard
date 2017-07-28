@@ -1,0 +1,5 @@
+package com.gaurav.model;
+
+public class CustomerInfo {
+
+}
