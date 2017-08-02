@@ -1,7 +1,9 @@
 package com.gaurav.model;
 
-import org.o7planning.springmvcshoppingcart.entity.Product;
+
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
+
+import com.gaurav.entity.Product;
  
 public class ProductInfo {
     private String code;

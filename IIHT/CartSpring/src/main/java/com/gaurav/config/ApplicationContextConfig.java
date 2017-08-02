@@ -27,7 +27,8 @@ import com.gaurav.dao.impl.OrderDAOImpl;
 import com.gaurav.dao.impl.ProductDAOImpl;
  
 @Configuration
-@ComponentScan("org.o7planning.springmvcshoppingcart.*")
+//@ComponentScan("org.o7planning.springmvcshoppingcart.*")
+@ComponentScan("com.gaurav.*")
 @EnableTransactionManagement
 // Load to Environment.
 @PropertySource("classpath:ds-hibernate-cfg.properties")
@@ -92,9 +93,10 @@ public class ApplicationContextConfig {
          
  
         LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
-         
-        // Package contain entity classes
-        factoryBean.setPackagesToScan(new String[] { "org.o7planning.springmvcshoppingcart.entity" });
+        
+        // Package contain entity classes  
+     //   factoryBean.setPackagesToScan(new String[] { "org.o7planning.springmvcshoppingcart.entity" });
+        factoryBean.setPackagesToScan(new String[] { "com.gaurav.entity" });
         factoryBean.setDataSource(dataSource);
         factoryBean.setHibernateProperties(properties);
         factoryBean.afterPropertiesSet();

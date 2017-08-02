@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/gaurav/controller/MainController.java=UTF-8
 encoding//src/main/java/com/gaurav/dao/impl/OrderDAOImpl.java=UTF-8
 encoding//src/main/java/com/gaurav/dao/impl/ProductDAOImpl.java=UTF-8
 encoding//src/main/java/com/gaurav/model/OrderDetailInfo.java=UTF-8

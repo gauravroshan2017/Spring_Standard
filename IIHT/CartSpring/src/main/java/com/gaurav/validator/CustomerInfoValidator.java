@@ -16,12 +16,10 @@ public class CustomerInfoValidator implements Validator {
  
     // This Validator support CustomerInfo class.
     
-    @Override
     public boolean supports(Class<?> clazz) {
         return clazz == CustomerInfo.class;
     }
  
-    @Override
     public void validate(Object target, Errors errors) {
         CustomerInfo custInfo = (CustomerInfo) target;
  

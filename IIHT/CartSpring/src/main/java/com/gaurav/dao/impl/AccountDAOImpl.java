@@ -18,12 +18,11 @@ public class AccountDAOImpl implements AccountDAO {
     @Autowired
     private SessionFactory sessionFactory;
  
-    @Override
     public Account findAccount(String userName ) {
         Session session = sessionFactory.getCurrentSession();
         Criteria crit = session.createCriteria(Account.class);
         crit.add(Restrictions.eq("userName", userName));
-        return (Account)x crit.uniqueResult();
+        return (Account) crit.uniqueResult();
     }
  
 }

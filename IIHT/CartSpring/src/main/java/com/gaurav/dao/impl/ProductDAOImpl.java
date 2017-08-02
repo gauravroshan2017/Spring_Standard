@@ -1,6 +1,6 @@
 package com.gaurav.dao.impl;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import org.hibernate.Criteria;
@@ -22,7 +22,7 @@ public class ProductDAOImpl implements ProductDAO {
     @Autowired
     private SessionFactory sessionFactory;
  
-    @Override
+  
     public Product findProduct(String code) {
         Session session = sessionFactory.getCurrentSession();
         Criteria crit = session.createCriteria(Product.class);
@@ -30,7 +30,6 @@ public class ProductDAOImpl implements ProductDAO {
         return (Product) crit.uniqueResult();
     }
  
-    @Override
     public ProductInfo findProductInfo(String code) {
         Product product = this.findProduct(code);
         if (product == null) {
@@ -39,7 +38,6 @@ public class ProductDAOImpl implements ProductDAO {
         return new ProductInfo(product.getCode(), product.getName(), product.getPrice());
     }
  
-    @Override
     public void save(ProductInfo productInfo) {
         String code = productInfo.getCode();
  
@@ -72,7 +70,6 @@ public class ProductDAOImpl implements ProductDAO {
         this.sessionFactory.getCurrentSession().flush();
     }
  
-    @Override
     public PaginationResult<ProductInfo> queryProducts(int page, int maxResult, int maxNavigationPage,
             String likeName) {
         String sql = "Select new " + ProductInfo.class.getName() //
@@ -93,7 +90,6 @@ public class ProductDAOImpl implements ProductDAO {
         return new PaginationResult<ProductInfo>(query, page, maxResult, maxNavigationPage);
     }
  
-    @Override
     public PaginationResult<ProductInfo> queryProducts(int page, int maxResult, int maxNavigationPage) {
         return queryProducts(page, maxResult, maxNavigationPage, null);
     }

@@ -18,12 +18,10 @@ public class ProductInfoValidator implements Validator {
     private ProductDAO productDAO;
  
     // This Validator support ProductInfo class.
-    @Override
     public boolean supports(Class<?> clazz) {
         return clazz == ProductInfo.class;
     }
  
-    @Override
     public void validate(Object target, Errors errors) {
         ProductInfo productInfo = (ProductInfo) target;
  

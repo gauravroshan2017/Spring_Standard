@@ -1,6 +1,6 @@
 package com.gaurav.dao.impl;
 
-import java.sql.Date;
+import java.util.Date;
 
 import java.util.List;
 import java.util.UUID;
@@ -44,7 +44,7 @@ public class OrderDAOImpl implements OrderDAO {
         return value;
     }
  
-    @Override
+ 
     public void saveOrder(CartInfo cartInfo) {
         Session session = sessionFactory.getCurrentSession();
  
@@ -87,7 +87,6 @@ public class OrderDAOImpl implements OrderDAO {
     }
  
     // @page = 1, 2, ...
-    @Override
     public PaginationResult<OrderInfo> listOrderInfo(int page, int maxResult, int maxNavigationPage) {
         String sql = "Select new " + OrderInfo.class.getName()//
                 + "(ord.id, ord.orderDate, ord.orderNum, ord.amount, "
@@ -108,7 +107,6 @@ public class OrderDAOImpl implements OrderDAO {
         return (Order) crit.uniqueResult();
     }
  
-    @Override
     public OrderInfo getOrderInfo(String orderId) {
         Order order = this.findOrder(orderId);
         if (order == null) {
@@ -119,7 +117,6 @@ public class OrderDAOImpl implements OrderDAO {
                 order.getCustomerAddress(), order.getCustomerEmail(), order.getCustomerPhone());
     }
  
-    @Override
     public List<OrderDetailInfo> listOrderDetailInfos(String orderId) {
         String sql = "Select new " + OrderDetailInfo.class.getName() //
                 + "(d.id, d.product.code, d.product.name , d.quanity,d.price,d.amount) "//
